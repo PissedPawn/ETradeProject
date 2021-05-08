@@ -9,7 +9,7 @@ public interface UserDao  {
 
 	void register(User user);
 	
-	void logIn(User user);
+	void logIn(String email, String password);
 	
 	ArrayList<User> getRegisteredUsers();
 	

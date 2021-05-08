@@ -27,8 +27,20 @@ public class HibernateUserDao implements UserDao {
 	}
 
 	@Override
-	public void logIn(User user) {
-		// TODO Auto-generated method stub
+	public void logIn(String email, String password) {
+		for(User _user : registeredUsers)
+		{
+			if(password== _user.getPassword()
+					&&email==_user.getEmailAdress())
+			{
+				System.out.println("Logged in succesfully");
+			}
+			else
+			{
+				System.out.println("User cannot be found");
+			}
+			
+		}
 		
 	}
 	
